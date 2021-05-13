@@ -20,8 +20,7 @@
         margin: 50px auto;
         line-height: 30px;
         border-radius: 50%;
-        background: radial-gradient(circle, #3fd4fb 0%,
-            #ff8ba2 70%);
+        background: radial-gradient(circle, $a 0%, $b 70%);
         @media (max-width: 510px) {
             width: 385px;
         }
@@ -36,14 +35,14 @@
             }
             button {
                 @include size(100px, 30px);
-                @include font(Times, 17px, bold, black);
-                background: #f87092;
+                @include font(Times, 17px, bold, $g);
+                background: $b;
             }
             .buttons {
                 margin-top: 20px;
             }
             &:invalid button[type="submit"] {
-                background:#5ec8ec;
+                background: $a;
             }
         }
     }

@@ -1,5 +1,5 @@
 .wrapperSale {
-    background: violet;
+    background: $b;
     @extend %modalPosition;
     .h1Sale {
         text-align: center;
@@ -21,7 +21,7 @@
                     0px 0px 0px 15px #eb5ba0,
                     0px 0px 0px 25px #f173af;
                 p {
-                    color: #3c2d38;
+                    color: $i;
                 }
             }
             .helperDiv {
@@ -32,7 +32,7 @@
                 @include background(url(/src/img/helper.jpg) no-repeat center, contain);
                 .helper {
                     font-size: 23px;
-                    text-shadow: #fffca8 2px 2px 0px, #9c9c9c 4px 4px 0px;
+                    text-shadow: $c 2px 2px 0px, $h 4px 4px 0px;
                 }
             }
 
@@ -48,6 +48,5 @@
 }
 
 .h1Sale, .h2Sale{
-    text-shadow: 2px 3px 4px #7a7a7a;
+    text-shadow: 2px 3px 4px $e;
 }
-

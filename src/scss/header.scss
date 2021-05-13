@@ -59,18 +59,18 @@
         text-align: center;
         border: 2px solid;
         border-radius: 5%;
-        background: #ff7490;
+        background: $b;
         @include font('Times New Roman', 15px, bold, $e);
         @media (max-width: 510px) {
             display: none;
         }
         form {
             &:invalid button[type="submit"] {
-                background: #5ec8ec;
+                background: $a;
             }
             button[type="submit"] {
             @include font('Times New Roman', 15px, bold, $e);
-                background: #dfb2c6;
+                background: $c;
             }
             .form_login, .form_password {
                 margin-bottom: 10px;

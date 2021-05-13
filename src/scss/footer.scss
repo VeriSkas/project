@@ -3,7 +3,7 @@
     grid-template: 1fr/1fr minmax(auto, 300px) minmax(auto, 800px) minmax(auto, 300px) 1fr;
     justify-items: center;
     align-items: center;
-    background: linear-gradient(90deg, #3fd4fb 0%, #ff8ba2 62%);
+    background: linear-gradient(90deg, $a 0%, $b 62%);
     .footer_text.left {
         grid-column: 2/3;
     }

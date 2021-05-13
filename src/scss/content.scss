@@ -94,7 +94,7 @@
             display: grid;
             grid-template: 1fr / minmax(auto, 100px) 1fr;
             justify-items: center;
-            background: #ff7490;
+            background: $b;
             padding: 15px;
             .reklama_img {
                 align-self: center;
@@ -104,7 +104,7 @@
             }
             .reklama_tittle {
                 text-align: center;
-                @include text(#95e6fc, uppercase,  1px, underline);
+                @include text($a, uppercase,  1px, underline);
             }
         }
         .content_products {
@@ -129,13 +129,14 @@
                         margin-bottom: 20px;
                     }
                     .product_button {
-                        @include text(#ffe6f2, uppercase,  2px, none);
                         justify-self: start;
                         line-height: 35px;
                         padding: 0px 20px;
-                        background: #58cbf0;
+                        background: $a;
+                        @include text($c, uppercase,  2px, none);
+                        font-weight: bold;
                         &:hover {
-                            background-color: #ff7490;
+                            background-color: $b;
                         }
                     }
                 }
@@ -145,5 +146,5 @@
 }
 
 .products_tittle, .content_tittle, a, p {
-    color: #58595b;
+    color: $e;
 }
