@@ -1,0 +1,53 @@
+.wrapperSale {
+    background: violet;
+    @extend %modalPosition;
+    .h1Sale {
+        text-align: center;
+
+    }
+    .contentSale {
+        display: grid;
+        grid-template: 1fr/1fr minmax(auto, 100px) minmax(auto, 800px) 1fr;
+        gap: 20px;
+        .conditions {
+            grid-column: 2/3;
+            width: 300px;
+            font-size: 18px;
+            .gameCondition {
+                @include size(85%, 200px);
+                text-align: center;
+                margin: 30px;
+                box-shadow: 0px 0px 0px 5px #f731a3,
+                    0px 0px 0px 15px #eb5ba0,
+                    0px 0px 0px 25px #f173af;
+                p {
+                    color: #3c2d38;
+                }
+            }
+            .helperDiv {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include size(100%, 150px);
+                @include background(url(/src/img/helper.jpg) no-repeat center, contain);
+                .helper {
+                    font-size: 23px;
+                    text-shadow: #fffca8 2px 2px 0px, #9c9c9c 4px 4px 0px;
+                }
+            }
+
+        }
+        .clickField {
+            grid-column: 3/4;
+            @include size(800px, 500px);
+            @include background(url(/src/img/sale.png) center no-repeat, contain);
+            border: 3px solid #b1779b;
+            cursor: pointer;
+        }
+    }
+}
+
+.h1Sale, .h2Sale{
+    text-shadow: 2px 3px 4px #7a7a7a;
+}
+

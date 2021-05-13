@@ -1,0 +1,50 @@
+#modal {
+    display: none;
+    @extend %modalPosition;
+    @media (max-width: 400px) {
+		overflow-x: scroll;
+	}
+    &:target {
+        display: block;
+        @include background(url('/Study/test/img/bgiModal.jpg')
+            no-repeat center, cover);
+    }
+    .modalArea {
+        @extend %modalPosition;
+    }
+    .formRegistr {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        @include size(500px, 500px);
+        margin: 50px auto;
+        line-height: 30px;
+        border-radius: 50%;
+        background: radial-gradient(circle, #3fd4fb 0%,
+            #ff8ba2 70%);
+        @media (max-width: 510px) {
+            width: 385px;
+        }
+        form {
+            text-align: center;
+            margin-top: 25px;
+            input {
+                @extend %modalFormInput;
+            }
+            select {
+                @extend %modalFormInput;
+            }
+            button {
+                @include size(100px, 30px);
+                @include font(Times, 17px, bold, black);
+                background: #f87092;
+            }
+            .buttons {
+                margin-top: 20px;
+            }
+            &:invalid button[type="submit"] {
+                background:#5ec8ec;
+            }
+        }
+    }
+}

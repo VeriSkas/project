@@ -1,0 +1,63 @@
+#modal {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+}
+
+#modal:target {
+    display: block;
+    background: url('/Study/test/img/bgiModal.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.modalArea {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+.formRegistr {
+    width: 500px;
+    height: 500px;
+    line-height: 30px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #3fd4fb 0%,
+        #ff8ba2 70%);
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    position: relative;
+}
+
+.formRegistr form {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.formRegistr form input, .formRegistr form select {
+    background: #ababc9;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.formRegistr form button {
+    background: #f87092;
+    width: 100px;
+    height: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.formRegistr form:invalid button[type="submit"] {
+    background: #3b3b94;
+}

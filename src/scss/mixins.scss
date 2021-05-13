@@ -1,0 +1,35 @@
+@mixin background($background, $backgroundSize) {
+    background: $background;
+    background-size: $backgroundSize;
+}
+
+@mixin position($position, $top, $left) {
+    position: $position;
+    top: $top;
+    left: $left;
+}
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin font($ff, $fs, $fw, $fc) {
+    font-family: $ff;
+    font-size: $fs;
+    font-weight: $fw;
+    color: $fc;
+}
+
+@mixin text($color, $tt, $letterSp, $td) {
+    color: $color;
+    text-transform: $tt;
+    letter-spacing: $letterSp;
+    text-decoration: $td;
+}
+
+@mixin sizeSprait($width, $height, $bp) {
+    width: $width;
+    height: $height;
+    background-position: $bp;
+}

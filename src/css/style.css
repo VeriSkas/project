@@ -1,0 +1,19 @@
+@import url(./header.css);
+@import url(./content.css);
+@import url(./footer.css);
+@import url(./modal.css);
+@import url(./media.css);
+
+ul {
+  list-style: none;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template: minmax(100px, auto) 1fr minmax(70px, auto)/1fr;
+  background: #3fd4fb;
+  background: linear-gradient(90deg, rgba(63, 212, 251, 0.5578606443) 0%,
+    rgba(255, 139, 162, 0.5270483193) 62%);
+}
+

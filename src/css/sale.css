@@ -1,0 +1,41 @@
+.wrapperSale {
+    background: violet;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+}
+
+.h1Sale {
+    text-align: center;
+}
+
+.contentSale {
+    display: grid;
+    grid-template: 1fr/1fr minmax(auto, 100px) minmax(auto, 800px) 1fr;
+    gap: 20px;
+}
+
+.h1Sale, .h2Sale{
+    text-shadow: 2px 3px 4px #7a7a7a;
+}
+
+.helper {
+    font-size: 23px;
+    text-shadow: #fffca8 2px 2px 0px, #9c9c9c 4px 4px 0px;
+}
+
+.conditions {
+    grid-column: 2/3;
+    width: 300px;
+    font-size: 18px;
+}
+
+.clickField {
+    grid-column: 3/4;
+    background: url(/Study/test/img/sale.png) center no-repeat;
+    background-size: contain;
+    width: 800px;
+    height: 500px;
+    border: 5px solid #b60070;
+    cursor: pointer;
+}

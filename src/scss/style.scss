@@ -1,0 +1,23 @@
+@import '/src/scss/colors.scss';
+@import '/src/scss/mixins.scss';
+@import '/src/scss/temp.scss';
+@import '/src/scss/header.scss';
+@import '/src/scss/content.scss';
+@import '/src/scss/footer.scss';
+@import '/src/scss/modal.scss';
+@import '/src/scss/sale.scss';
+
+ul {
+  	list-style: none;
+}
+
+.wrapper {
+	min-height: 100%;
+	@include position(absolute, 0, 0);
+	display: grid;
+	grid-template: minmax(100px, auto) 1fr minmax(70px, auto)/1fr;
+	@include background(linear-gradient(90deg, $d 0%, $f 62%), null);
+	@media (max-width: 360px) {
+		overflow-x: scroll;
+	}
+}

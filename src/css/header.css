@@ -1,0 +1,106 @@
+
+.header {
+    padding: 15px;
+    background: radial-gradient(circle, #3fd4fb 0%, #ff8ba2 62%);
+    display: grid;
+    grid-template: 1fr/1fr minmax(auto, 100px) minmax(auto, 1000px) minmax(auto, 300px) 1fr;
+    align-items: center;
+}
+
+.header_logo {
+    grid-column: 2/3;
+    background-image: url(../img/logo.png);
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-self: center;
+}
+
+.header_menu {
+    grid-column: 3/4;
+    font-family: fantasy;
+}
+
+.header_list {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+    font-size: 19px;
+    text-align: center;
+}
+
+.header_list>li {
+    margin-right: 10px;
+}
+
+.header_list>li:hover .header_sub-list {
+    display: block;
+}
+
+.header_list li {
+    position: relative;
+}
+
+.header_sub-list {
+    display: none;
+    position: absolute;
+    top: 23px;
+    left: 0;
+    padding: 0;
+    background: #f7c4dd;
+    font-family: sans-serif;
+}
+
+.header_sub-list a{
+    text-decoration: none;
+}
+
+.header_sub-list li{
+    padding: 5px;
+    border-top: 0.5px solid grey;
+}
+
+.header_link:hover, .form_button:hover,
+ button:hover, .header_sub-list li:hover {
+    background-color: #ff7876;
+}
+
+.header_form {
+    grid-column: 4/5;
+    border: 2px solid;
+    border-radius: 5%;
+    padding: 10px;
+    text-align: center;
+    font-family: arial;
+    color: #58595b;
+    background: #ff7490;
+}
+
+.header_form #submit {
+    color: #58595b;
+    font-weight: bold;
+    font-family: fantasy;
+    background: #dfb2c6;
+}
+
+.form_login, .form_password {
+    margin-bottom: 10px;
+}
+
+#submit {
+    color: #ffe6f2;
+    background: #58cbf0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0px 15px;
+    height: 30px;
+}
+
+.header_form_media {
+    background: url(/Study/test/img/header_iconBag_modal.png) no-repeat;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    display: none;
+}
