@@ -4,6 +4,7 @@ let width = 800;
 let height = 500;
 let saleMax = 50;
 let distance;
+let counter = 0;
 
 function  getRandomNumber(size) {
     return Math.floor(Math.random() * size);
@@ -42,12 +43,18 @@ function getDistanceHint(distance) {
 
 if (window.location.pathname === '/index2.html') {
     clickField.onclick = function (event) {
+        counter++;
         distance = getDistance(event, target);
         helper.innerHTML = getDistanceHint(distance);
-        let sale = getRandomNumber(saleMax);
+        let sale = saleMax - counter;
+        if (sale <= 0) {
+            alert(`Увы, скидку не нашли! Повезет в следующий раз! 😉`);
+            clickField.style.display = 'none';
+        }
         if (distance < 20) {
             alert(`УРА!!! Ваша скидка составляет ${sale}%. Она будет применена к Вашей корзине`);
             clickField.style.display = 'none';
+            console.log(sidebar_sale_game);
         }
     }
 }
