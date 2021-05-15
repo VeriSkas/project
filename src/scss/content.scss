@@ -62,6 +62,48 @@
                 text-align: center;
             }
         }
+        .sidebar_advantages {
+            margin: 40px 0;
+            .sidebar_advantage_title {
+                color: $e;
+                text-align:center;
+            }
+            .sidebar_advantage {
+                .sidebar_advantage_img {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    @include size(260px, 260px);
+                    margin-top: 20px;
+                    background: $b;
+                    border-radius: 10%;
+                    img {
+                        width: 50%;
+                        animation-play-state: paused;
+                        &:hover {
+                            animation: spin 1s ease infinite;
+                        }
+                        @keyframes spin {
+                            0% {
+                                transform: rotateZ(0deg);
+                            }
+                            100% {
+                                transform: rotateZ(360deg);
+                            }
+                        }
+                    }
+                }
+                .sidebar_advantage_a{
+                    text-decoration: none;
+                    font-size: 20px;
+                    text-align: center;
+                    &:hover {
+                        background: #ff7876;
+                    }
+                }
+            }
+        }
     }
     .content {
         grid-column: 3/4;

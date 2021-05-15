@@ -1,10 +1,11 @@
-let clickField = document.querySelector('.clickField');
-let helper = document.querySelector('.helper');
+import { clickField, helper, sidebar_sale_game} from './domVariables';
+
 let width = 800;
 let height = 500;
 let saleMax = 50;
 let distance;
 let counter = 0;
+let yiii = false;
 
 function  getRandomNumber(size) {
     return Math.floor(Math.random() * size);
@@ -49,12 +50,12 @@ if (window.location.pathname === '/index2.html') {
         let sale = saleMax - counter;
         if (sale <= 0) {
             alert(`Увы, скидку не нашли! Повезет в следующий раз! 😉`);
-            clickField.style.display = 'none';
+            window.location.href = '/';
+
         }
         if (distance < 20) {
             alert(`УРА!!! Ваша скидка составляет ${sale}%. Она будет применена к Вашей корзине`);
-            clickField.style.display = 'none';
-            console.log(sidebar_sale_game);
+            window.location.href = '/';
         }
     }
 }

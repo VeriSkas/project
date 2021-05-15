@@ -1,9 +1,22 @@
 import '../scss/style.scss';
-import './index2';
+import './saleGame';
+import {
+    wrapper,
+    headerModal,
+    header_form,
+    header_form_media,
+    input_search,
+    btn_search,
+    input_name,
+    input_surname,
+    input_password,
+    input_password2,
+    submit_btn,
+    product_buttons,
+} from './domVariables';
 
 //Выбирать количество товара
 
-let product_buttons = document.querySelectorAll('.product_button');
 let counter = 0;
 
 for (let i = 0; i < product_buttons.length; i++) {
@@ -39,12 +52,7 @@ for (let i = 0; i < product_buttons.length; i++) {
 // Валидация формы регистрации
 
 let englishLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '`'];
-let russianLetters = ['а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я']
-let input_name = document.querySelector('.name');
-let input_surname = document.querySelector('.surname');
-let input_password = document.querySelector('.password');
-let input_password2 = document.querySelector('.password2');
-let submit_btn = document.querySelector('.buttons button[type="submit"]');
+let russianLetters = ['а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я'];
 
 function checkForUnacceptableSymbols(arr1, arr2) { //проверка на недопустимые символы
     let unacceptableSymbols = [];
@@ -83,9 +91,6 @@ if (window.location.pathname === '/') {  //чтоб не вылазила оши
 
 // Кнопка ПОИСК
 
-let input_search = document.querySelector('.input_search');
-let btn_search = document.querySelector('.btn_search');
-
 if (window.location.pathname === '/') {
     btn_search.onclick = function() {
         alert('По вашему запросу ничего не найдено: ' + input_search.value);
@@ -94,11 +99,6 @@ if (window.location.pathname === '/') {
 }
 
 //форма модалка header
-
-let header_form_media = document.querySelector('.header_form_media');
-let header_form = document.querySelector('.header_form');
-let headerModal = document.querySelector('.headerModal');
-let wrapper = document.querySelector('.wrapper');
 
 if (window.location.pathname === '/') {
     header_form_media.onclick = function() {

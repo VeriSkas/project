@@ -1,6 +1,6 @@
 .header {
     display: grid;
-    grid-template: 1fr/1fr minmax(auto, 100px) minmax(auto, 1000px) minmax(auto, 300px) 1fr;
+    grid-template: 1fr / 1fr minmax(auto, 100px) minmax(auto, 1000px) minmax(auto, 300px) 1fr;
     padding: 15px;
     align-items: center;
     @include background(radial-gradient(circle, $a 0%, $b 62%), null);

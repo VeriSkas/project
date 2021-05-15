@@ -13,7 +13,8 @@ ul {
 
 .wrapper {
 	display: grid;
-	grid-template: minmax(100px, auto) 1fr minmax(70px, auto)/1fr;
+	grid-template: minmax(100px, auto) 1fr minmax(70px, auto) / 1fr;
+	min-width: 100%;
 	min-height: 100%;
 	@include position(absolute, 0, 0);
 	@include background(linear-gradient(90deg, $d 0%, $f 62%), null);
