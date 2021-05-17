@@ -13,3 +13,5 @@ export let product_buttons = document.querySelectorAll('.product_button');
 export let clickField = document.querySelector('.clickField');
 export let helper = document.querySelector('.helper');
 export let sidebar_sale_game = document.querySelector('.sidebar_sale_game');
+export let submitBtn = document.querySelector('#submit');
+export let formAuth = document.querySelector('#formAuth');

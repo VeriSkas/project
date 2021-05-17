@@ -34,14 +34,14 @@
                     </ul>
                 </div>
                 <div class="header_form">
-                    <form action="#">
+                    <form action="#" id="formAuth">
                         <div class="form_login">
-                            <label for="name"> Логин:__ </label>
-                            <input id='name' type="text" placeholder="Введите логин" required>
+                            <label for="email"> Email:__ </label>
+                            <input id='email' type="email" placeholder="Введите email" required minlength="5" maxlength="50">
                         </div>
                         <div class="form_password">
                             <label for="password">Пароль:_</label>
-                            <input id='password' type="password" placeholder="Введите пароль" required>
+                            <input id='password' type="password" placeholder="Введите пароль" required minlength="5" maxlength="25">
                         </div>
                         <button id ="submit" type="submit">Войти</button>
                         <a href="#modal" class="form_button">Регистрация</a>

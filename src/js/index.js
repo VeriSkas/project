@@ -1,4 +1,5 @@
 import '../scss/style.scss';
+import './form_auth';
 import './saleGame';
 import {
     wrapper,
