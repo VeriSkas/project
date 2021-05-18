@@ -9,6 +9,7 @@ export let input_surname = document.querySelector('.surname');
 export let input_password = document.querySelector('.password');
 export let input_password2 = document.querySelector('.password2');
 export let submit_btn = document.querySelector('.buttons button[type="submit"]');
+export let formSignUp = document.querySelector('#formSignUp');
 export let product_buttons = document.querySelectorAll('.product_button');
 export let clickField = document.querySelector('.clickField');
 export let helper = document.querySelector('.helper');

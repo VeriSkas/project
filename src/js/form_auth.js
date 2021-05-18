@@ -34,5 +34,5 @@ function checkToken(tok) {
     if(!tok) {
         return Promise.resolve(alert('Такой пользователь не зарегистрирован!'));
     }
-        return Promise.resolve(alert('Ваша корзина с товарами'));
+        return Promise.resolve(alert('Ваша корзина с товарами пуста🗑️'));
 }

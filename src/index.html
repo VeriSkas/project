@@ -213,15 +213,15 @@
         <div id="modal">
             <a href="#" class="modalArea"></a>
             <div class="formRegistr">
-                <form action="#">
+                <form action="/src/index.html" id="formSignUp">
                     <h1>Регистрация</h1>
                     <div>
                         <label for="name">Имя:</label>
-                        <input class="name" type="text" placeholder="Введите ваше имя" required>
+                        <input class="name" type="text" placeholder="Введите ваше имя" required minlength="5" maxlength="100">
                     </div>
                     <div>
                         <label for="surname">Фамилия:</label>
-                        <input class="surname" type="text" placeholder="Введите вашу фамилию" required>
+                        <input class="surname" type="text" placeholder="Введите вашу фамилию" required minlength="5" maxlength="100">
                     </div>
                     <div>
                         <label for="brthData">Дата рождения:</label>
@@ -243,7 +243,7 @@
                     </div>
                     <div>
                         <label for="email">Email:</label>
-                        <input class="email" type="email" placeholder="Введите ваш email" required>
+                        <input class="email" type="email" placeholder="Введите ваш email" required minlength="5" maxlength="100">
                     </div>
                     <div>
                         <label for="password">Пароль:</label>
