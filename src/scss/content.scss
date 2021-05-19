@@ -5,6 +5,7 @@
     @media (max-width: 700px) {
         grid-template: 2fr / 1fr;
     }
+
     .sidebar {
         grid-column: 2/3;
         padding: 15px;
@@ -15,26 +16,34 @@
             justify-items: center;
             padding: 5px;
         }
+
         .sidebar_list {
+
             li {
                 margin-bottom: 25px;
+
                 .sidebar_link {
                     @include font(Times, 20px, bold, null);
                     text-decoration: none;
+
                     &:hover {
                         text-decoration: underline;
                     }
                 }
             }
         }
+
         .sidebar_video {
+
             img {
                 border-radius: 10%;
             }
         }
+
         .sidebar_search {
             position: relative;
             margin-top: 10px;
+
             .input_search {
                 @include size(250px, 40px);
                 padding-right: 20px;
@@ -42,10 +51,12 @@
                 background: $b;
                 font-size: 18px;
                 border: 2px solid $e;
+
                 &:hover {
                     border: 2px solid $g;
                 }
             }
+
             .btn_search {
                 @include position(absolute, 3px, 230px);
                 @include size(40px, 40px);
@@ -53,10 +64,12 @@
                 border: none;
             }
         }
+
         .sidebar_sale_game {
             @media (max-width: 1100px) {
                 display: none;
             }
+
             .a_sale_game {
                 width: 270px;
                 text-align: center;
@@ -64,11 +77,14 @@
         }
         .sidebar_advantages {
             margin: 40px 0;
+
             .sidebar_advantage_title {
                 color: $e;
                 text-align:center;
             }
+
             .sidebar_advantage {
+
                 .sidebar_advantage_img {
                     display: flex;
                     flex-direction: column;
@@ -78,12 +94,15 @@
                     margin-top: 20px;
                     background: $b;
                     border-radius: 10%;
+
                     img {
                         width: 50%;
                         animation-play-state: paused;
+
                         &:hover {
                             animation: spin 1s ease infinite;
                         }
+
                         @keyframes spin {
                             0% {
                                 transform: rotateZ(0deg);
@@ -94,10 +113,12 @@
                         }
                     }
                 }
+
                 .sidebar_advantage_a{
                     text-decoration: none;
                     font-size: 20px;
                     text-align: center;
+
                     &:hover {
                         background: #ff7876;
                     }
@@ -105,6 +126,7 @@
             }
         }
     }
+
     .content {
         grid-column: 3/4;
         padding-left: 30px;
@@ -112,64 +134,80 @@
             grid-column: 1/1;
             padding-left: 5px;
         }
+
         .content_gallery {
             margin: 0px 0px 30px 0px;
+
             .gallery_items {
                 display: grid;
                 gap: 10px;
                 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
                 margin-bottom: 30px;
+
                 .gallery_item {
                     position: relative;
                     padding: 0px 0px 85% 0px;
+
                     &.big {
                         grid-column: span 2;
                         grid-row: span 2;
                     }
+
                     img {
                         @extend %imgCover;
                     }
                 }
             }
         }
+
         .content_reklama {
             display: grid;
             grid-template: 1fr / minmax(auto, 100px) 1fr;
             justify-items: center;
             background: $b;
             padding: 15px;
+
             .reklama_img {
                 align-self: center;
+
                 img {
                     width: 85%;
                 }
             }
+
             .reklama_tittle {
                 text-align: center;
                 @include text($a, uppercase,  1px, underline);
             }
         }
+
         .content_products {
+
             .products_items {
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
                 column-gap: 30px;
                 row-gap: 50px;
+
                 .products_item {
                     display: grid;
                     grid-auto-rows: row;
                     grid-template: auto 1fr minmax(40px, auto)/1fr;
+
                     .products_img {
                         position: relative;
                         padding: 0px 0px 90% 0px;
                         margin: 0px 0px 20px 0px;
+
                         img {
                             @extend %imgCover;
                         }
                     }
+
                     .products_name {
                         margin-bottom: 20px;
                     }
+
                     .product_button {
                         justify-self: start;
                         line-height: 35px;
@@ -177,6 +215,7 @@
                         background: $a;
                         @include text($c, uppercase,  2px, none);
                         font-weight: bold;
+
                         &:hover {
                             background-color: $b;
                         }

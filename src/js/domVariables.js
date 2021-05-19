@@ -1,13 +1,10 @@
 export let wrapper = document.querySelector('.wrapper');
+export let header = document.querySelector('.header');
 export let headerModal = document.querySelector('.headerModal');
 export let header_form = document.querySelector('.header_form');
 export let header_form_media = document.querySelector('.header_form_media');
 export let input_search = document.querySelector('.input_search');
 export let btn_search = document.querySelector('.btn_search');
-export let input_name = document.querySelector('.name');
-export let input_surname = document.querySelector('.surname');
-export let input_password = document.querySelector('.password');
-export let input_password2 = document.querySelector('.password2');
 export let submit_btn = document.querySelector('.buttons button[type="submit"]');
 export let formSignUp = document.querySelector('#formSignUp');
 export let product_buttons = document.querySelectorAll('.product_button');

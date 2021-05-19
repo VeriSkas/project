@@ -4,14 +4,17 @@
     @media (max-width: 400px) {
 		overflow-x: scroll;
 	}
+
     &:target {
         display: block;
         @include background(url('/Study/test/img/bgiModal.jpg')
             no-repeat center, cover);
     }
+
     .modalArea {
         @extend %modalPosition;
     }
+
     .formRegistr {
         display: flex;
         justify-content: center;
@@ -24,23 +27,25 @@
         @media (max-width: 510px) {
             width: 385px;
         }
+
         form {
             text-align: center;
             margin-top: 25px;
+
             input {
                 @extend %modalFormInput;
             }
-            select {
-                @extend %modalFormInput;
-            }
+
             button {
                 @include size(100px, 30px);
                 @include font(Times, 17px, bold, $g);
                 background: $b;
             }
+
             .buttons {
                 margin-top: 20px;
             }
+            
             &:invalid button[type="submit"] {
                 background: $a;
             }

@@ -1,7 +1,9 @@
-import '../scss/style.scss';
 import './form_auth';
 import './saleGame';
 import './hederFormModal';
 import './searchButton';
 import './counterProducts';
 import './validation';
+import './form_auth';
+import './api_handlers';
+import '../scss/style.scss';

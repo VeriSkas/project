@@ -5,10 +5,12 @@
     @media (max-width: 880px) {
         overflow-y: scroll;
     }
+
     .h1Sale {
         text-align: center;
 
     }
+
     .contentSale {
         display: grid;
         grid-template: 1fr/ minmax(300px, 600px) minmax(auto, 800px);
@@ -17,15 +19,18 @@
         @media (max-width: 1200px) {
             grid-template: 2fr / minmax(auto, 1200px);
         }
+
         .conditions {
             font-size: 18px;
             @media (max-width: 1200px) {
                 display: flex;
                 font-size: 16px;
             }
+
             .gameCondition {
                 @include size(85%, 200px);
                 text-align: center;
+
                 p {
                     padding: 10px;
                     text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px,
@@ -35,12 +40,14 @@
                     color: $i;
                 }
             }
+
             .helperDiv {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 @include size(100%, 150px);
                 @include background(url(/src/img/helper.jpg) no-repeat center, contain);
+
                 .helper {
                     font-size: 23px;
                     text-shadow: $c 2px 2px 0px, $h 4px 4px 0px;
@@ -48,6 +55,7 @@
             }
 
         }
+
         .clickField {
             @include size(800px, 500px);
             @include background(url(/src/img/sale.png) center no-repeat, contain);

@@ -37,11 +37,11 @@
                     <form action="#" id="formAuth">
                         <div class="form_login">
                             <label for="email"> Email:__ </label>
-                            <input id='email' type="email" placeholder="Введите email" required minlength="5" maxlength="50">
+                            <input id='email' class="email" type="email" placeholder="Введите email" required minlength="5" maxlength="50">
                         </div>
                         <div class="form_password">
                             <label for="password">Пароль:_</label>
-                            <input id='password' type="password" placeholder="Введите пароль" required minlength="5" maxlength="25">
+                            <input id='password' class="password" type="password" placeholder="Введите пароль" required minlength="5" maxlength="25">
                         </div>
                         <button id ="submit" type="submit">Войти</button>
                         <a href="#modal" class="form_button">Регистрация</a>
@@ -217,41 +217,33 @@
                     <h1>Регистрация</h1>
                     <div>
                         <label for="name">Имя:</label>
-                        <input class="name" type="text" placeholder="Введите ваше имя" required minlength="5" maxlength="100">
+                        <input class="name" type="text" placeholder="Введите ваше имя" required minlength="4" maxlength="100">
                     </div>
                     <div>
                         <label for="surname">Фамилия:</label>
-                        <input class="surname" type="text" placeholder="Введите вашу фамилию" required minlength="5" maxlength="100">
+                        <input class="surname" type="text" placeholder="Введите вашу фамилию" required minlength="4" maxlength="100">
                     </div>
                     <div>
                         <label for="brthData">Дата рождения:</label>
                         <input class="brthData" type="date" required>
                     </div>
                     <div>
-                        <label for="Women">Женщина</label>
-                        <input class="Women" type="radio" name="gender" required>
-                        <label for="Men">Мужчина</label>
-                        <input class="Men" type="radio" name="gender">
-                    </div>
-                    <div>
-                        <label for="child">Дети:</label>
-                        <select class="child" name="child">
-                            <option selected value="notChild">Не имею</option>
-                            <option value="One">Один ребенок</option>
-                            <option value="More">Два и более детей</option>
-                        </select>
+                        <label for="women">Женщина</label>
+                        <input class="women" type="radio" name="gender" required>
+                        <label for="men">Мужчина</label>
+                        <input class="men" type="radio" name="gender">
                     </div>
                     <div>
                         <label for="email">Email:</label>
-                        <input class="email" type="email" placeholder="Введите ваш email" required minlength="5" maxlength="100">
+                        <input class="emailAuth" type="email" placeholder="Введите ваш email" required minlength="9" maxlength="100">
                     </div>
                     <div>
                         <label for="password">Пароль:</label>
-                        <input class="password" type="password" placeholder="Введите пароль" required>
+                        <input class="passwordAuth" type="password" placeholder="Введите пароль" required minlength="6" maxlength="100">
                     </div>
                     <div>
                         <label for="password2">Повторите:</label>
-                        <input class="password2" type="password" placeholder="Введите пароль" required>
+                        <input class="password2" type="password" placeholder="Введите пароль" required minlength="6" maxlength="100">
                     </div>
                     <div>
                         <label for="consent">Согласны на обработку персональных данных: </label>

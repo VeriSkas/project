@@ -21,4 +21,13 @@ ul {
 	@media (max-width: 360px) {
 		overflow-x: scroll;
 	}
+
+	.exit {
+		background: $c;
+		@include font('Times', 15px, bold, $e);
+
+		&:hover {
+			background: $h;
+		}
+	}
 }
