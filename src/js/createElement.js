@@ -1,4 +1,4 @@
-import { removeToken } from './api_handlers.js';
+import { removeToken } from './localSt';
 import { header_form, header } from './domVariables';
 
 export let createButtonExit = () => {
@@ -8,7 +8,10 @@ export let createButtonExit = () => {
     header.after(button);
     button.onclick = () => {
         removeToken();
-        header_form.style.display = 'block';
+        if (window.innerWidth > 510) {
+            header_form.style.display = 'block';
+        }
         button.remove();
+        location.reload();
     }
 }

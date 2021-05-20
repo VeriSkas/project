@@ -1,9 +1,9 @@
+// import './media';
+import './api_handlers';
 import './form_auth';
 import './saleGame';
-import './hederFormModal';
 import './searchButton';
 import './counterProducts';
 import './validation';
-import './form_auth';
-import './api_handlers';
+import './hederFormModal';
 import '../scss/style.scss';

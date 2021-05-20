@@ -1,11 +1,10 @@
-import { clickField, helper, sidebar_sale_game} from './domVariables';
+import { clickField, helper } from './domVariables';
 
 let width = 800;
 let height = 500;
 let saleMax = 50;
 let distance;
 let counter = 0;
-let yiii = false;
 
 function  getRandomNumber(size) {
     return Math.floor(Math.random() * size);
@@ -29,11 +28,11 @@ function getDistanceHint(distance) {
         return "Обожжешься!";
     } else if (distance < 60) {
         return "Очень горячо";
-    } else if (distance < 80) {
-        return "Горячо";
     } else if (distance < 100) {
+        return "Горячо";
+    } else if (distance < 150) {
         return "Тепло";
-    } else if (distance < 160) {
+    } else if (distance < 250) {
         return "Холодно";
     } else if (distance < 320) {
         return "Очень холодно";
@@ -51,7 +50,6 @@ if (window.location.pathname === '/index2.html') {
         if (sale <= 0) {
             alert(`Увы, скидку не нашли! Повезет в следующий раз! 😉`);
             window.location.href = '/';
-
         }
         if (distance < 20) {
             alert(`УРА!!! Ваша скидка составляет ${sale}%. Она будет применена к Вашей корзине`);

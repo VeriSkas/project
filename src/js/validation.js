@@ -8,7 +8,5 @@ export const checkForUnacceptableSymbols = (arr1, arr2) => { //проверка 
             unacceptableSymbols.push(arr2[i]);
         }
     }
-    if(unacceptableSymbols) {
-        return true
-    } else return false
+    return unacceptableSymbols;
 }

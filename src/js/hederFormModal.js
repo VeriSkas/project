@@ -3,7 +3,7 @@ import {
     headerModal,
     header_form,
     header_form_media,
-    input_search,
+    sidebar_search,
 } from './domVariables';
 
 
@@ -11,8 +11,10 @@ if (window.location.pathname === '/') {
     header_form_media.onclick = function() {
         headerModal.append(header_form);
         header_form.setAttribute('class', 'header_formModal');
+        let header_formModal = document.querySelector('.header_formModal');
+        header_formModal.style.display = 'block';
         headerModal.style.display = 'flex';
         wrapper.style.position = 'fixed';
-        input_search.style.display = 'none';
+        sidebar_search.style.display = 'none';
     }
 }
