@@ -47,7 +47,7 @@ window.onload = () => {
     }
 
     if(window.location.pathname === '/' && window.location.hash === '#modal') {
-        formSignUp.addEventListener( 'submit', event => {
+        formSignUp.addEventListener('submit', event => {
             event.preventDefault();
             let name = document.querySelector('.name').value;
             let surname = document.querySelector('.surname').value;
