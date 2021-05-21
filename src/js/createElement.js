@@ -1,4 +1,4 @@
-import { removeToken } from './localSt';
+import { removeLS } from './localSt';
 import { header_form, header } from './domVariables';
 
 export let createButtonExit = () => {
@@ -7,7 +7,7 @@ export let createButtonExit = () => {
     button.innerHTML = 'Выйти из личного кабинета';
     header.after(button);
     button.onclick = () => {
-        removeToken();
+        removeLS('token');
         if (window.innerWidth > 510) {
             header_form.style.display = 'block';
         }

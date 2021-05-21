@@ -2,6 +2,7 @@ import {
     formSignUp,
     formAuth,
     header_form,
+    header_form_media,
     sidebar_sale_game,
     returnBtn
 } from './domVariables';
@@ -10,7 +11,7 @@ import {
     initApi,
     createUser,
 } from './api_handlers.js';
-import { setToken, getToken } from './localSt';
+import { setLS, getLS } from './localSt';
 import {
     englishLetters,
     russianLetters,
@@ -20,18 +21,21 @@ import { createButtonExit } from './createElement';
 require("firebase/auth");
 
 window.onload = () => {
+
     initApi();
+
     if (window.location.pathname === '/') {
-        if(getToken()) {
-            sidebar_sale_game.style.display = 'block';
+        if (getLS('token')) {
+            getLS('game') ? sidebar_sale_game.style.display = 'none':
+                sidebar_sale_game.style.display = 'block';
             header_form.style.display = 'none';
+            header_form_media.style.display = 'none';
             createButtonExit();
         } else {
             sidebar_sale_game.style.display = 'none';
             if (window.innerWidth > 510) {
                 header_form.style.display = 'block';
             }
-
         }
         formAuth.addEventListener('submit', event => {
             const email = document.querySelector('.email').value;
@@ -39,7 +43,7 @@ window.onload = () => {
             event.preventDefault();
             signIn(email, password).then( ({idToken}) => {
                 if(idToken) {
-                    setToken(idToken);
+                    setLS('token', idToken);
                     location.reload();
                     alert('Ваша корзина с товарами пуста🗑️');
                 } else alert('Такой пользователь не зарегистрирован!');
@@ -74,4 +78,3 @@ window.onload = () => {
         }
     }
 }
-
