@@ -46,7 +46,7 @@
                 justify-content: center;
                 align-items: center;
                 @include size(100%, 150px);
-                @include background(url(/src/img/helper.jpg) no-repeat center, contain);
+                @include background(url(/src/assets/img/helper.jpg) no-repeat center, contain);
 
                 .helper {
                     font-size: 23px;
@@ -58,7 +58,7 @@
 
         .clickField {
             @include size(800px, 500px);
-            @include background(url(/src/img/sale.png) center no-repeat, contain);
+            @include background(url(/src/assets/img/sale.png) center no-repeat, contain);
             box-shadow: 0px 0px 0px 5px #f731a3,
                 0px 0px 0px 15px #eb5ba0,
                 0px 0px 0px 25px #f173af;

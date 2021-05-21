@@ -22,7 +22,7 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns: [
               {
-                from: path.resolve(__dirname, 'src/img/favicon1.png'),
+                from: path.resolve(__dirname, 'src/assets/img/favicon1.png'),
                 to: path.resolve(__dirname, 'dist')
               }
             ]
@@ -37,7 +37,22 @@ module.exports = {
             {
                 test: /\.(jpg|png|svg|gif)/,
                 use: ['file-loader']
-            }
+            },
+            {
+                test: /\.html$/,
+                use: [
+                    {
+                        loader: 'html-loader',
+                        options: {
+                            sources: true,
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.(png|jpg)$/,
+                type: 'asset',
+            },
         ]
     },
     devServer: {

@@ -12,7 +12,7 @@
         grid-column: 2/3;
         justify-self: center;
         @include size(100px, 100px);
-        @include background (url(/src/img/logo.png) no-repeat center, cover);
+        @include background (url(/src/assets/img/logo.png) no-repeat center, cover);
     }
 
     .header_menu {
@@ -96,7 +96,7 @@
     .header_form_media {
         display: none;
         @include size(50px, 50px);
-        @include background(url(/src/img/header_iconBag_modal.png) no-repeat, cover);
+        @include background(url(/src/assets/img/header_iconBag_modal.png) no-repeat, cover);
         @media (max-width: 510px) {
             display: block;
             cursor: pointer;
