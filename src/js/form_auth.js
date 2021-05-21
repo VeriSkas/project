@@ -2,7 +2,8 @@ import {
     formSignUp,
     formAuth,
     header_form,
-    sidebar_sale_game
+    sidebar_sale_game,
+    returnBtn
 } from './domVariables';
 import {
     signIn,
@@ -46,7 +47,7 @@ window.onload = () => {
         });
     }
 
-    if(window.location.pathname === '/' && window.location.hash === '#modal') {
+    if(window.location.pathname === '/sign-up.html') {
         formSignUp.addEventListener('submit', event => {
             event.preventDefault();
             let name = document.querySelector('.name').value;
@@ -67,5 +68,10 @@ window.onload = () => {
                 } else alert (`Недопустимые символы в имени и фамилии: ${nameUnacceptableSymbols}`);
             } else alert ('Пароли не совпадают!')
         })
+
+        returnBtn.onclick = function () {
+            window.location.href = '/';
+        }
     }
 }
+

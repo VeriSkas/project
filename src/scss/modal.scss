@@ -1,20 +1,10 @@
 #modal {
-    display: none;
     @extend %modalPosition;
+    @include background(url('/src/assets/img/bgiModal.jpg')
+        no-repeat center, cover);
     @media (max-width: 400px) {
 		overflow-x: scroll;
-	}
-
-    &:target {
-        display: block;
-        @include background(url('/Study/test/img/bgiModal.jpg')
-            no-repeat center, cover);
     }
-
-    .modalArea {
-        @extend %modalPosition;
-    }
-
     .formRegistr {
         display: flex;
         justify-content: center;
@@ -45,7 +35,12 @@
             .buttons {
                 margin-top: 20px;
             }
-            
+
+            .returnBtn {
+                @include size(200px, 50px);
+                margin-top: 10px;
+            }
+
             &:invalid button[type="submit"] {
                 background: $a;
             }

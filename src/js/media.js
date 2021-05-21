@@ -8,4 +8,6 @@ function checkMediaQuery() {
     }
 }
 
-window.addEventListener('resize', checkMediaQuery);
+if (window.location.pathname === '/') {
+    window.addEventListener('resize', checkMediaQuery);
+}

@@ -14,3 +14,4 @@ export let helper = document.querySelector('.helper');
 export let sidebar_sale_game = document.querySelector('.sidebar_sale_game');
 export let submitBtn = document.querySelector('#submit');
 export let formAuth = document.querySelector('#formAuth');
+export let returnBtn = document.querySelector('.returnBtn');

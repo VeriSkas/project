@@ -4,11 +4,7 @@ import {
     authUrl,
     baseURL
 } from './api-config';
-import {
-    setToken,
-    getToken,
-    removeToken,
-} from './localSt';
+import { setToken } from './localSt';
 require("firebase/auth");
 
 export const initApi = async () => {
@@ -48,7 +44,7 @@ export const createUser = async (email, password, name, surname, brthData, gende
     await signIn(email, password).then( ({idToken}) => {
         if(idToken) {
             setToken(idToken);
-            // window.location.href = '/';
+            window.location.href = '/';
             alert('Ваша корзина с товарами пуста🗑️');
         } else alert('Уппс...что-то пошло не так, попробуйте еще раз');
     })
