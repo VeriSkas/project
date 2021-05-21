@@ -9,6 +9,7 @@ import {
     getToken,
     removeToken,
 } from './localSt';
+require("firebase/auth");
 
 export const initApi = async () => {
     firebase.initializeApp(firebaseConfig);
@@ -30,9 +31,9 @@ export const signIn = (email, password) => {
 
 export const createUser = async (email, password, name, surname, brthData, gender) => {
     const user = await firebase
-    .auth()
-    .createUserWithEmailAndPassword(email, password)
-    .then(response => console.log(response));
+        .auth()
+        .createUserWithEmailAndPassword(email, password)
+        .then(response => console.log(response));
 
     await fetch( `${baseURL}/users.json`, {
         method: 'POST',
@@ -47,7 +48,7 @@ export const createUser = async (email, password, name, surname, brthData, gende
     await signIn(email, password).then( ({idToken}) => {
         if(idToken) {
             setToken(idToken);
-            window.location.href = '/';
+            // window.location.href = '/';
             alert('Ваша корзина с товарами пуста🗑️');
         } else alert('Уппс...что-то пошло не так, попробуйте еще раз');
     })

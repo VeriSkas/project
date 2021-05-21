@@ -34,10 +34,10 @@ module.exports = {
                 test: /\.scss$/,
                 use: ['style-loader', 'css-loader', 'sass-loader']
             },
-            {
-                test: /\.(jpg|png|svg|gif)/,
-                use: ['file-loader']
-            },
+            // {
+            //     test: /\.(jpg|png|svg|gif)/,
+            //     use: ['file-loader']
+            // },
             {
                 test: /\.html$/,
                 use: [
